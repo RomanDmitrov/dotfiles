@@ -1,0 +1,28 @@
+# === Шрифт ===
+font-family = JetBrainsMono Nerd Font
+font-size = 14
+
+# === Тема и внешний вид ===
+theme = GitHub Dark Default
+background-opacity = 0.95
+background-blur-radius = 20
+window-padding-x = 10
+window-padding-y = 10
+
+# === Курсор ===
+cursor-style = block
+cursor-style-blink = false
+
+# === Окно ===
+window-decoration = true
+confirm-close-surface = false
+
+# === Шелл-интеграция (полезные фичи: заголовок с текущей директорией, cwd в новых сплитах и т.п.) ===
+shell-integration = zsh
+shell-integration-features = cursor,sudo,title
+
+# === Сплиты и табы — свои шорткаты (опционально, ниже дефолты Ghostty уже неплохие) ===
+keybind = cmd+d=new_split:right
+keybind = cmd+shift+d=new_split:down
+keybind = cmd+alt+left=goto_split:left
+keybind = cmd+alt+right=goto_split:right

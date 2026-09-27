@@ -1,0 +1,68 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[┌─](bold green)$os$username$hostname$directory$git_branch$git_status$python$nodejs$docker_context
+[└─](bold green)$character
+"""
+
+right_format = """$cmd_duration$time"""
+
+[os]
+disabled = false
+style = "bold blue"
+
+[os.symbols]
+Macos = " "
+
+[username]
+show_always = false
+style_user = "bold cyan"
+format = "[$user]($style) "
+
+[hostname]
+ssh_only = true
+
+[directory]
+style = "bold cyan"
+truncation_length = 3
+truncate_to_repo = true
+format = "[$path]($style) "
+
+[git_branch]
+symbol = " "
+style = "bold yellow"
+format = "[$symbol$branch]($style) "
+
+[git_status]
+style = "bold red"
+format = "[$all_status$ahead_behind]($style) "
+
+[python]
+symbol = " "
+style = "bold green"
+format = "[$symbol$version]($style) "
+
+[nodejs]
+symbol = " "
+style = "bold green"
+format = "[$symbol$version]($style) "
+
+[docker_context]
+symbol = " "
+style = "bold blue"
+format = "[$symbol$context]($style) "
+
+[cmd_duration]
+min_time = 2000
+style = "bold yellow"
+format = "took [$duration]($style) "
+
+[time]
+disabled = false
+time_format = "%H:%M"
+style = "bold white"
+format = "[$time]($style)"
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
